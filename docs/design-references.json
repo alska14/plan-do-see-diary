@@ -1,0 +1,52 @@
+{
+  "measured_on": "2026-09-30",
+  "method": "Claude 내장 브라우저로 각 서비스의 공개 첫 화면을 열고, document.body와 첫 화면의 큼직한 버튼/링크에서 getComputedStyle로 배경색·글자색·버튼색·글꼴을 읽었다. oklch로 나온 값은 원문 그대로 적었다. 로그인 뒤 앱 화면은 보지 않았고, 값은 소개(랜딩) 페이지 기준이다. '투명'은 body 배경이 지정되지 않아 흰색 바탕 위에 그려진다는 뜻이고, '미측정'은 스크립트로 값을 읽지 못한 것이다.",
+  "items": [
+    {"name":"Todoist","url":"https://todoist.com","kind":"할 일","bg":"oklch(0.9945 0.0017 67.8) 따뜻한 오프화이트","fg":"rgb(37, 34, 30)","accent":"oklch(0.6147 0.1986 30.12) 붉은색 버튼","font":"Graphik","take":"포인트 색 하나(빨강)와 넉넉한 여백, 장식 없음. 목록 중심 화면."},
+    {"name":"Things","url":"https://culturedcode.com/things/","kind":"할 일","bg":"rgb(242, 245, 247)","fg":"rgb(48, 51, 54)","accent":"파랑 계열(앱 아이콘, 값은 미측정)","font":"ui-sans-serif","take":"차가운 회청색 배경과 큼직한 둥근 체크박스. 이 앱의 배경색 기준으로 삼음."},
+    {"name":"Sunsama","url":"https://www.sunsama.com","kind":"하루 계획","bg":"rgb(255, 255, 255) (첫 화면은 크림→피치 그라데이션)","fg":"rgb(32, 34, 40)","accent":"rgb(255, 137, 28) 주황 버튼, 검정 버튼 rgb(0, 0, 0)","font":"DM Sans","take":"진한 잉크색 글자와 차분한 문구. 글자색 #202228 계열을 참고."},
+    {"name":"TickTick","url":"https://ticktick.com","kind":"할 일","bg":"rgb(255, 255, 255)","fg":"rgb(0, 0, 0)","accent":"rgb(71, 114, 250) 블루 버튼","font":"AppestInter (Inter 계열)","take":"흰 배경에 블루 하나."},
+    {"name":"Notion","url":"https://www.notion.com","kind":"노트·문서","bg":"rgb(255, 255, 255)","fg":"rgba(0, 0, 0, 0.95)","accent":"rgb(0, 117, 222) 블루 버튼","font":"NotionInter","take":"블루 하나, 글자는 순검정이 아닌 95% 불투명."},
+    {"name":"Linear","url":"https://linear.app","kind":"이슈 관리","bg":"rgb(8, 9, 10) 다크","fg":"rgb(247, 248, 248)","accent":"rgb(94, 106, 210) 인디고 버튼","font":"Inter Variable","take":"다크 모드는 인디고 하나로 통일. 다크 테마 참고."},
+    {"name":"Asana","url":"https://asana.com","kind":"프로젝트 관리","bg":"투명(흰색)","fg":"rgb(100, 111, 121)","accent":"rgb(13, 13, 13) 검정 버튼, 보조 rgb(243, 243, 243)","font":"TWK Lausanne","take":"버튼을 검정으로 두고 색은 절제."},
+    {"name":"Trello","url":"https://trello.com","kind":"칸반","bg":"rgb(255, 255, 255)","fg":"rgb(9, 30, 66)","accent":"rgb(0, 101, 255) 블루 버튼","font":"Charlie Text","take":"짙은 남색 잉크 글자와 블루 버튼."},
+    {"name":"ClickUp","url":"https://clickup.com","kind":"프로젝트 관리","bg":"투명(흰색)","fg":"rgb(41, 45, 52)","accent":"rgb(32, 32, 32) 검정 버튼","font":"Plus Jakarta Sans","take":"진한 회색 글자, 검정 버튼."},
+    {"name":"Any.do","url":"https://www.any.do","kind":"할 일","bg":"rgb(255, 255, 255)","fg":"rgb(115, 115, 115)","accent":"rgb(0, 131, 255) 블루 링크","font":"Inter","take":"'단순한 할 일 목록'을 내세우며 색은 블루 하나."},
+    {"name":"Microsoft To Do","url":"https://www.microsoft.com/ko-kr/microsoft-365/microsoft-to-do-list-app","kind":"할 일","bg":"rgb(255, 255, 255)","fg":"rgb(0, 0, 0)","accent":"rgb(24, 90, 189) 블루 버튼","font":"Segoe UI","take":"한국어 화면에서도 블루 하나."},
+    {"name":"Amazing Marvin","url":"https://amazingmarvin.com","kind":"할 일","bg":"rgb(255, 255, 255)","fg":"rgb(17, 24, 39)","accent":"rgb(247, 218, 136) 버터 옐로 버튼(글자는 어두운색)","font":"Outfit","take":"밝은 색 버튼에는 어두운 글자를 써서 대비를 확보."},
+    {"name":"Akiflow","url":"https://akiflow.com","kind":"할 일·캘린더","bg":"rgb(248, 250, 252)","fg":"rgb(0, 0, 0)","accent":"rgb(85, 0, 151) 보라","font":"sans-serif (웹폰트 미확인)","take":"거의 흰 회청색 배경 #F8FAFC."},
+    {"name":"Motion","url":"https://www.usemotion.com","kind":"AI 일정","bg":"oklch(1 0 0) 흰색","fg":"rgb(0, 0, 0)","accent":"rgb(44, 119, 231) 블루 버튼","font":"Inter","take":"블루 하나."},
+    {"name":"Reclaim","url":"https://reclaim.ai","kind":"AI 캘린더","bg":"rgb(255, 255, 255)","fg":"rgb(24, 29, 37)","accent":"rgb(85, 98, 235) 인디고 버튼","font":"Poppins","take":"인디고 하나와 잉크색 글자 rgb(24, 29, 37)."},
+    {"name":"Habitica","url":"https://habitica.com","kind":"습관(게임화)","bg":"rgb(249, 249, 249)","fg":"rgb(78, 74, 87)","accent":"rgb(154, 98, 255) 보라, 진보라 rgb(79, 42, 147)","font":"Roboto","take":"게임 요소가 강해 색이 화려함. 이 과제에는 맞지 않아 반면교사로 삼음."},
+    {"name":"Strides","url":"https://stridesapp.com","kind":"목표·습관","bg":"rgb(255, 255, 255)","fg":"rgb(51, 51, 51)","accent":"미측정","font":"Avenir Next","take":"목표를 성공 기준과 함께 적게 하는 구조(SMART). 계획 폼의 '성공 기준' 항목 참고."},
+    {"name":"Morgen","url":"https://www.morgen.so","kind":"하루 계획","bg":"rgb(25, 26, 35) 다크","fg":"rgb(203, 204, 204)","accent":"rgb(243, 194, 106) 앰버 버튼(글자는 어두운색)","font":"Inter Variable","take":"다크 배경 위 앰버 하나."},
+    {"name":"Day One","url":"https://dayoneapp.com","kind":"일기","bg":"rgb(255, 255, 255)","fg":"rgb(51, 59, 64)","accent":"rgb(30, 117, 174) 블루 버튼","font":"Avenir Next","take":"일기 앱도 흰 배경과 차분한 블루."},
+    {"name":"Daylio","url":"https://daylio.net","kind":"기분 일기","bg":"rgb(237, 246, 255) 연한 하늘색","fg":"rgb(77, 98, 116)","accent":"rgb(51, 51, 51) 진회색 버튼","font":"Nunito","take":"둥근 서체로 부드러운 인상. 이 앱은 읽기 쉬운 서체를 우선해 채택하지 않음."},
+    {"name":"Toggl Track","url":"https://toggl.com/track/","kind":"시간 기록","bg":"rgb(248, 247, 241) 따뜻한 오프화이트","fg":"rgb(54, 49, 55)","accent":"rgb(44, 19, 56) 짙은 자주 버튼","font":"Aeonik","take":"시간 집계를 큰 숫자로 보여 주는 방식. 돌아보기 집계 카드 참고."},
+    {"name":"Clockify","url":"https://clockify.me","kind":"시간 기록","bg":"투명(흰색)","fg":"rgb(0, 0, 0)","accent":"rgb(2, 135, 197) 블루 버튼","font":"Inter","take":"실제 시간 기록과 보고서 구조."},
+    {"name":"monday.com","url":"https://monday.com","kind":"프로젝트 관리","bg":"투명(흰색)","fg":"rgb(51, 51, 51)","accent":"rgb(97, 97, 255) 인디고 버튼","font":"Poppins","take":"한국어 페이지도 인디고 하나."},
+    {"name":"Basecamp","url":"https://basecamp.com","kind":"프로젝트 관리","bg":"oklch(1 0 0) 흰색","fg":"oklch(0.3209 0.0204 233.83) 짙은 슬레이트","accent":"글자색과 같은 슬레이트 버튼","font":"Graphik","take":"버튼과 글자를 같은 잉크색으로 통일하는 절제된 방식."},
+    {"name":"Workflowy","url":"https://workflowy.com","kind":"개요 노트","bg":"rgb(255, 255, 255)","fg":"rgb(42, 49, 53)","accent":"rgb(73, 186, 242) 하늘색 버튼","font":"Open Sans","take":"한국어 페이지, 목록 중심의 단순한 구조."},
+    {"name":"Obsidian","url":"https://obsidian.md","kind":"노트","bg":"투명(어두운 페이지)","fg":"rgb(238, 238, 238)","accent":"rgb(124, 58, 237) 보라 버튼","font":"ui-sans-serif","take":"다크 배경 위 보라 하나."},
+    {"name":"Bear","url":"https://bear.app","kind":"노트","bg":"투명","fg":"rgb(68, 68, 68)","accent":"미측정","font":"bearsans (자체 서체)","take":"본문 글자를 #444 회색으로 낮춰 눈이 편함."},
+    {"name":"Structured","url":"https://structured.app","kind":"하루 계획","bg":"rgb(255, 167, 160) 코랄","fg":"rgb(0, 0, 0)","accent":"rgb(92, 133, 168) 더스티 블루 버튼","font":"Inter","take":"하루를 시간 순서 카드로 배치. 파스텔 톤은 참고만 하고 채택하지 않음."},
+    {"name":"Tweek","url":"https://tweek.so","kind":"주간 플래너","bg":"rgb(255, 255, 255)","fg":"rgb(0, 0, 0)","accent":"rgb(0, 0, 0) 검정 버튼(글자 rgb(237, 234, 227))","font":"SuisseIntl","take":"주간 단위 플래너, 장식 없이 선과 글자만 사용."},
+    {"name":"Superlist","url":"https://www.superlist.com","kind":"할 일·노트","bg":"rgb(24, 24, 36) 다크 네이비","fg":"미측정","accent":"rgb(38, 37, 59) 패널","font":"sans-serif (웹폰트 미확인)","take":"다크 네이비 배경."},
+    {"name":"Amplenote","url":"https://www.amplenote.com","kind":"노트·할 일","bg":"rgb(255, 255, 255)","fg":"rgb(47, 55, 64)","accent":"rgb(255, 178, 56) 앰버를 14% 불투명 배경으로만 사용","font":"Roboto","take":"포인트 색을 옅은 배경으로만 써서 강조를 절제."},
+    {"name":"RescueTime","url":"https://www.rescuetime.com","kind":"시간 기록","bg":"rgb(254, 254, 254)","fg":"rgb(68, 66, 63)","accent":"rgb(181, 210, 255) 연한 파랑 버튼(글자는 검정)","font":"Nunito","take":"연한 배경색 버튼에는 검정 글자를 써서 대비를 확보."},
+    {"name":"Journey","url":"https://journey.cloud","kind":"일기","bg":"투명","fg":"rgb(0, 0, 0)","accent":"rgb(37, 211, 102) 초록 버튼(글자는 검정)","font":"Gotham Rounded","take":"일기 앱이지만 초록 버튼. 이 앱의 포인트 색과는 방향이 달라 채택하지 않음."},
+    {"name":"토스","url":"https://toss.im","kind":"국내 서비스(한글 UI)","bg":"미측정 (body 배경 투명)","fg":"rgb(0, 0, 0)","accent":"미측정","font":"Toss Product Sans","take":"한글 화면의 서체 크기와 줄 간격 감각을 참고. 색은 측정하지 못함."}
+  ],
+  "findings": [
+    "다크 기본 4곳(Linear, Morgen, Superlist, Obsidian)을 빼면 나머지는 흰색·오프화이트·회청색 같은 중립 배경이다. → 배경은 중립색으로, 다크는 시스템 설정을 따르게 한다.",
+    "포인트 색은 대부분 한 가지뿐이다. 파랑·인디고 계열이 가장 많고(TickTick, Notion, Trello, Motion, Microsoft To Do, Day One, Any.do, Clockify, Linear, Reclaim, monday), 검정·잉크색 버튼이 그다음이다(Asana, ClickUp, Basecamp, Tweek). → 화면마다 포인트 하나: 잉크 버튼 + 단계색(PLAN #3547A8 / DO #0B6E62 / SEE #7A3B8F). 블루는 11곳이 써서 차별화가 안 되어 주색에서 제외, 따뜻한 오프화이트 바탕(Todoist·Toggl)과 잉크 버튼(Asana·Basecamp·Tweek)을 채택",
+    "글자색은 순검정이 아니라 잉크색이다(#202228, #25221E, #091E42, #2A3135). → 본문 글자는 #1F1D19.",
+    "밝은 색 버튼(Marvin, Morgen, RescueTime, Journey)은 글자를 어둡게 한다. → 대비를 색이 아니라 수치로 확인한다.",
+    "서체는 Inter 계열이 가장 많다(Notion, Linear, Motion, Any.do, Clockify, Morgen, Structured, TickTick). → 한글을 함께 쓰는 Pretendard(Inter 기반 한글 서체)를 쓰고 Noto Sans KR·맑은 고딕을 예비로 둔다.",
+    "시간 기록 서비스(Toggl, Clockify, RescueTime)는 집계를 큰 숫자로 먼저 보여 준다. → 돌아보기 집계 카드는 큰 숫자 + 눌러서 근거 보기.",
+    "할 일 앱(Things, Todoist, Tweek)은 행마다 상자를 두르지 않고 헤어라인으로 나눈다. → 목록은 흰 카드 하나 안에 헤어라인으로 구분한다."
+  ],
+  "not_adopted": [
+    "Habitica(게임화 색), Daylio(둥근 서체), Structured(파스텔 코랄), Journey(초록 버튼)는 이 과제의 '계획을 어디서 자주 틀리는지 보게 하는 도구' 성격과 맞지 않아 참고만 하고 채택하지 않았다."
+  ]
+}

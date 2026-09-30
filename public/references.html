@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>디자인 참고 서비스 · 플랜두씨 다이어리</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/references.css">
+</head>
+<body>
+  <main class="wrap refs">
+    <p><a href="/">← 다이어리로 돌아가기</a></p>
+    <h1>디자인 참고 서비스 34곳</h1>
+    <p class="muted">측정일 2026-09-30. Claude 내장 브라우저로 각 서비스의 공개 첫 화면을 열고, document.body와 첫 화면의 큼직한 버튼/링크에서 getComputedStyle로 배경색·글자색·버튼색·글꼴을 읽었다. oklch로 나온 값은 원문 그대로 적었다. 로그인 뒤 앱 화면은 보지 않았고, 값은 소개(랜딩) 페이지 기준이다. '투명'은 body 배경이 지정되지 않아 흰색 바탕 위에 그려진다는 뜻이고, '미측정'은 스크립트로 값을 읽지 못한 것이다.</p>
+    <section class="card"><h2>조사로 얻은 원칙</h2><ul><li>다크 기본 4곳(Linear, Morgen, Superlist, Obsidian)을 빼면 나머지는 흰색·오프화이트·회청색 같은 중립 배경이다. → 배경은 중립색으로, 다크는 시스템 설정을 따르게 한다.</li><li>포인트 색은 대부분 한 가지뿐이다. 파랑·인디고 계열이 가장 많고(TickTick, Notion, Trello, Motion, Microsoft To Do, Day One, Any.do, Clockify, Linear, Reclaim, monday), 검정·잉크색 버튼이 그다음이다(Asana, ClickUp, Basecamp, Tweek). → 화면마다 포인트 하나: 잉크 버튼 + 단계색(PLAN #3547A8 / DO #0B6E62 / SEE #7A3B8F). 블루는 11곳이 써서 차별화가 안 되어 주색에서 제외, 따뜻한 오프화이트 바탕(Todoist·Toggl)과 잉크 버튼(Asana·Basecamp·Tweek)을 채택</li><li>글자색은 순검정이 아니라 잉크색이다(#202228, #25221E, #091E42, #2A3135). → 본문 글자는 #1F1D19.</li><li>밝은 색 버튼(Marvin, Morgen, RescueTime, Journey)은 글자를 어둡게 한다. → 대비를 색이 아니라 수치로 확인한다.</li><li>서체는 Inter 계열이 가장 많다(Notion, Linear, Motion, Any.do, Clockify, Morgen, Structured, TickTick). → 한글을 함께 쓰는 Pretendard(Inter 기반 한글 서체)를 쓰고 Noto Sans KR·맑은 고딕을 예비로 둔다.</li><li>시간 기록 서비스(Toggl, Clockify, RescueTime)는 집계를 큰 숫자로 먼저 보여 준다. → 돌아보기 집계 카드는 큰 숫자 + 눌러서 근거 보기.</li><li>할 일 앱(Things, Todoist, Tweek)은 행마다 상자를 두르지 않고 헤어라인으로 나눈다. → 목록은 흰 카드 하나 안에 헤어라인으로 구분한다.</li></ul>
+      <h3>채택하지 않은 것</h3><ul><li>Habitica(게임화 색), Daylio(둥근 서체), Structured(파스텔 코랄), Journey(초록 버튼)는 이 과제의 '계획을 어디서 자주 틀리는지 보게 하는 도구' 성격과 맞지 않아 참고만 하고 채택하지 않았다.</li></ul></section>
+    <h2>서비스별 기록</h2>
+    <ol class="ref-list">
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">1</span><h3><a href="https://todoist.com" rel="noopener noreferrer" target="_blank">Todoist</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="oklch(0.9945 0.0017 67.8)"></i>oklch(0.9945 0.0017 67.8) 따뜻한 오프화이트</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(37, 34, 30)"></i>rgb(37, 34, 30)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="oklch(0.6147 0.1986 30.12)"></i>oklch(0.6147 0.1986 30.12) 붉은색 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Graphik</dd></div>
+  </dl>
+  <p class="small">포인트 색 하나(빨강)와 넉넉한 여백, 장식 없음. 목록 중심 화면.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">2</span><h3><a href="https://culturedcode.com/things/" rel="noopener noreferrer" target="_blank">Things</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(242, 245, 247)"></i>rgb(242, 245, 247)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(48, 51, 54)"></i>rgb(48, 51, 54)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color=""></i>파랑 계열(앱 아이콘, 값은 미측정)</dd></div>
+    <div><dt>글꼴</dt><dd>ui-sans-serif</dd></div>
+  </dl>
+  <p class="small">차가운 회청색 배경과 큼직한 둥근 체크박스. 이 앱의 배경색 기준으로 삼음.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">3</span><h3><a href="https://www.sunsama.com" rel="noopener noreferrer" target="_blank">Sunsama</a></h3><span class="chip">하루 계획</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255) (첫 화면은 크림→피치 그라데이션)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(32, 34, 40)"></i>rgb(32, 34, 40)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(255, 137, 28)"></i>rgb(255, 137, 28) 주황 버튼, 검정 버튼 rgb(0, 0, 0)</dd></div>
+    <div><dt>글꼴</dt><dd>DM Sans</dd></div>
+  </dl>
+  <p class="small">진한 잉크색 글자와 차분한 문구. 글자색 #202228 계열을 참고.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">4</span><h3><a href="https://ticktick.com" rel="noopener noreferrer" target="_blank">TickTick</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(71, 114, 250)"></i>rgb(71, 114, 250) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>AppestInter (Inter 계열)</dd></div>
+  </dl>
+  <p class="small">흰 배경에 블루 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">5</span><h3><a href="https://www.notion.com" rel="noopener noreferrer" target="_blank">Notion</a></h3><span class="chip">노트·문서</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgba(0, 0, 0, 0.95)"></i>rgba(0, 0, 0, 0.95)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(0, 117, 222)"></i>rgb(0, 117, 222) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>NotionInter</dd></div>
+  </dl>
+  <p class="small">블루 하나, 글자는 순검정이 아닌 95% 불투명.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">6</span><h3><a href="https://linear.app" rel="noopener noreferrer" target="_blank">Linear</a></h3><span class="chip">이슈 관리</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(8, 9, 10)"></i>rgb(8, 9, 10) 다크</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(247, 248, 248)"></i>rgb(247, 248, 248)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(94, 106, 210)"></i>rgb(94, 106, 210) 인디고 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Inter Variable</dd></div>
+  </dl>
+  <p class="small">다크 모드는 인디고 하나로 통일. 다크 테마 참고.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">7</span><h3><a href="https://asana.com" rel="noopener noreferrer" target="_blank">Asana</a></h3><span class="chip">프로젝트 관리</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명(흰색)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(100, 111, 121)"></i>rgb(100, 111, 121)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(13, 13, 13)"></i>rgb(13, 13, 13) 검정 버튼, 보조 rgb(243, 243, 243)</dd></div>
+    <div><dt>글꼴</dt><dd>TWK Lausanne</dd></div>
+  </dl>
+  <p class="small">버튼을 검정으로 두고 색은 절제.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">8</span><h3><a href="https://trello.com" rel="noopener noreferrer" target="_blank">Trello</a></h3><span class="chip">칸반</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(9, 30, 66)"></i>rgb(9, 30, 66)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(0, 101, 255)"></i>rgb(0, 101, 255) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Charlie Text</dd></div>
+  </dl>
+  <p class="small">짙은 남색 잉크 글자와 블루 버튼.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">9</span><h3><a href="https://clickup.com" rel="noopener noreferrer" target="_blank">ClickUp</a></h3><span class="chip">프로젝트 관리</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명(흰색)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(41, 45, 52)"></i>rgb(41, 45, 52)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(32, 32, 32)"></i>rgb(32, 32, 32) 검정 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Plus Jakarta Sans</dd></div>
+  </dl>
+  <p class="small">진한 회색 글자, 검정 버튼.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">10</span><h3><a href="https://www.any.do" rel="noopener noreferrer" target="_blank">Any.do</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(115, 115, 115)"></i>rgb(115, 115, 115)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(0, 131, 255)"></i>rgb(0, 131, 255) 블루 링크</dd></div>
+    <div><dt>글꼴</dt><dd>Inter</dd></div>
+  </dl>
+  <p class="small">'단순한 할 일 목록'을 내세우며 색은 블루 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">11</span><h3><a href="https://www.microsoft.com/ko-kr/microsoft-365/microsoft-to-do-list-app" rel="noopener noreferrer" target="_blank">Microsoft To Do</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(24, 90, 189)"></i>rgb(24, 90, 189) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Segoe UI</dd></div>
+  </dl>
+  <p class="small">한국어 화면에서도 블루 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">12</span><h3><a href="https://amazingmarvin.com" rel="noopener noreferrer" target="_blank">Amazing Marvin</a></h3><span class="chip">할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(17, 24, 39)"></i>rgb(17, 24, 39)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(247, 218, 136)"></i>rgb(247, 218, 136) 버터 옐로 버튼(글자는 어두운색)</dd></div>
+    <div><dt>글꼴</dt><dd>Outfit</dd></div>
+  </dl>
+  <p class="small">밝은 색 버튼에는 어두운 글자를 써서 대비를 확보.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">13</span><h3><a href="https://akiflow.com" rel="noopener noreferrer" target="_blank">Akiflow</a></h3><span class="chip">할 일·캘린더</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(248, 250, 252)"></i>rgb(248, 250, 252)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(85, 0, 151)"></i>rgb(85, 0, 151) 보라</dd></div>
+    <div><dt>글꼴</dt><dd>sans-serif (웹폰트 미확인)</dd></div>
+  </dl>
+  <p class="small">거의 흰 회청색 배경 #F8FAFC.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">14</span><h3><a href="https://www.usemotion.com" rel="noopener noreferrer" target="_blank">Motion</a></h3><span class="chip">AI 일정</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="oklch(1 0 0)"></i>oklch(1 0 0) 흰색</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(44, 119, 231)"></i>rgb(44, 119, 231) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Inter</dd></div>
+  </dl>
+  <p class="small">블루 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">15</span><h3><a href="https://reclaim.ai" rel="noopener noreferrer" target="_blank">Reclaim</a></h3><span class="chip">AI 캘린더</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(24, 29, 37)"></i>rgb(24, 29, 37)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(85, 98, 235)"></i>rgb(85, 98, 235) 인디고 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Poppins</dd></div>
+  </dl>
+  <p class="small">인디고 하나와 잉크색 글자 rgb(24, 29, 37).</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">16</span><h3><a href="https://habitica.com" rel="noopener noreferrer" target="_blank">Habitica</a></h3><span class="chip">습관(게임화)</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(249, 249, 249)"></i>rgb(249, 249, 249)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(78, 74, 87)"></i>rgb(78, 74, 87)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(154, 98, 255)"></i>rgb(154, 98, 255) 보라, 진보라 rgb(79, 42, 147)</dd></div>
+    <div><dt>글꼴</dt><dd>Roboto</dd></div>
+  </dl>
+  <p class="small">게임 요소가 강해 색이 화려함. 이 과제에는 맞지 않아 반면교사로 삼음.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">17</span><h3><a href="https://stridesapp.com" rel="noopener noreferrer" target="_blank">Strides</a></h3><span class="chip">목표·습관</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(51, 51, 51)"></i>rgb(51, 51, 51)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color=""></i>미측정</dd></div>
+    <div><dt>글꼴</dt><dd>Avenir Next</dd></div>
+  </dl>
+  <p class="small">목표를 성공 기준과 함께 적게 하는 구조(SMART). 계획 폼의 '성공 기준' 항목 참고.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">18</span><h3><a href="https://www.morgen.so" rel="noopener noreferrer" target="_blank">Morgen</a></h3><span class="chip">하루 계획</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(25, 26, 35)"></i>rgb(25, 26, 35) 다크</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(203, 204, 204)"></i>rgb(203, 204, 204)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(243, 194, 106)"></i>rgb(243, 194, 106) 앰버 버튼(글자는 어두운색)</dd></div>
+    <div><dt>글꼴</dt><dd>Inter Variable</dd></div>
+  </dl>
+  <p class="small">다크 배경 위 앰버 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">19</span><h3><a href="https://dayoneapp.com" rel="noopener noreferrer" target="_blank">Day One</a></h3><span class="chip">일기</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(51, 59, 64)"></i>rgb(51, 59, 64)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(30, 117, 174)"></i>rgb(30, 117, 174) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Avenir Next</dd></div>
+  </dl>
+  <p class="small">일기 앱도 흰 배경과 차분한 블루.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">20</span><h3><a href="https://daylio.net" rel="noopener noreferrer" target="_blank">Daylio</a></h3><span class="chip">기분 일기</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(237, 246, 255)"></i>rgb(237, 246, 255) 연한 하늘색</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(77, 98, 116)"></i>rgb(77, 98, 116)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(51, 51, 51)"></i>rgb(51, 51, 51) 진회색 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Nunito</dd></div>
+  </dl>
+  <p class="small">둥근 서체로 부드러운 인상. 이 앱은 읽기 쉬운 서체를 우선해 채택하지 않음.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">21</span><h3><a href="https://toggl.com/track/" rel="noopener noreferrer" target="_blank">Toggl Track</a></h3><span class="chip">시간 기록</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(248, 247, 241)"></i>rgb(248, 247, 241) 따뜻한 오프화이트</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(54, 49, 55)"></i>rgb(54, 49, 55)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(44, 19, 56)"></i>rgb(44, 19, 56) 짙은 자주 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Aeonik</dd></div>
+  </dl>
+  <p class="small">시간 집계를 큰 숫자로 보여 주는 방식. 돌아보기 집계 카드 참고.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">22</span><h3><a href="https://clockify.me" rel="noopener noreferrer" target="_blank">Clockify</a></h3><span class="chip">시간 기록</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명(흰색)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(2, 135, 197)"></i>rgb(2, 135, 197) 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Inter</dd></div>
+  </dl>
+  <p class="small">실제 시간 기록과 보고서 구조.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">23</span><h3><a href="https://monday.com" rel="noopener noreferrer" target="_blank">monday.com</a></h3><span class="chip">프로젝트 관리</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명(흰색)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(51, 51, 51)"></i>rgb(51, 51, 51)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(97, 97, 255)"></i>rgb(97, 97, 255) 인디고 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Poppins</dd></div>
+  </dl>
+  <p class="small">한국어 페이지도 인디고 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">24</span><h3><a href="https://basecamp.com" rel="noopener noreferrer" target="_blank">Basecamp</a></h3><span class="chip">프로젝트 관리</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="oklch(1 0 0)"></i>oklch(1 0 0) 흰색</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="oklch(0.3209 0.0204 233.83)"></i>oklch(0.3209 0.0204 233.83) 짙은 슬레이트</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color=""></i>글자색과 같은 슬레이트 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Graphik</dd></div>
+  </dl>
+  <p class="small">버튼과 글자를 같은 잉크색으로 통일하는 절제된 방식.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">25</span><h3><a href="https://workflowy.com" rel="noopener noreferrer" target="_blank">Workflowy</a></h3><span class="chip">개요 노트</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(42, 49, 53)"></i>rgb(42, 49, 53)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(73, 186, 242)"></i>rgb(73, 186, 242) 하늘색 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Open Sans</dd></div>
+  </dl>
+  <p class="small">한국어 페이지, 목록 중심의 단순한 구조.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">26</span><h3><a href="https://obsidian.md" rel="noopener noreferrer" target="_blank">Obsidian</a></h3><span class="chip">노트</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명(어두운 페이지)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(238, 238, 238)"></i>rgb(238, 238, 238)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(124, 58, 237)"></i>rgb(124, 58, 237) 보라 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>ui-sans-serif</dd></div>
+  </dl>
+  <p class="small">다크 배경 위 보라 하나.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">27</span><h3><a href="https://bear.app" rel="noopener noreferrer" target="_blank">Bear</a></h3><span class="chip">노트</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(68, 68, 68)"></i>rgb(68, 68, 68)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color=""></i>미측정</dd></div>
+    <div><dt>글꼴</dt><dd>bearsans (자체 서체)</dd></div>
+  </dl>
+  <p class="small">본문 글자를 #444 회색으로 낮춰 눈이 편함.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">28</span><h3><a href="https://structured.app" rel="noopener noreferrer" target="_blank">Structured</a></h3><span class="chip">하루 계획</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 167, 160)"></i>rgb(255, 167, 160) 코랄</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(92, 133, 168)"></i>rgb(92, 133, 168) 더스티 블루 버튼</dd></div>
+    <div><dt>글꼴</dt><dd>Inter</dd></div>
+  </dl>
+  <p class="small">하루를 시간 순서 카드로 배치. 파스텔 톤은 참고만 하고 채택하지 않음.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">29</span><h3><a href="https://tweek.so" rel="noopener noreferrer" target="_blank">Tweek</a></h3><span class="chip">주간 플래너</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0) 검정 버튼(글자 rgb(237, 234, 227))</dd></div>
+    <div><dt>글꼴</dt><dd>SuisseIntl</dd></div>
+  </dl>
+  <p class="small">주간 단위 플래너, 장식 없이 선과 글자만 사용.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">30</span><h3><a href="https://www.superlist.com" rel="noopener noreferrer" target="_blank">Superlist</a></h3><span class="chip">할 일·노트</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(24, 24, 36)"></i>rgb(24, 24, 36) 다크 네이비</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color=""></i>미측정</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(38, 37, 59)"></i>rgb(38, 37, 59) 패널</dd></div>
+    <div><dt>글꼴</dt><dd>sans-serif (웹폰트 미확인)</dd></div>
+  </dl>
+  <p class="small">다크 네이비 배경.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">31</span><h3><a href="https://www.amplenote.com" rel="noopener noreferrer" target="_blank">Amplenote</a></h3><span class="chip">노트·할 일</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(255, 255, 255)"></i>rgb(255, 255, 255)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(47, 55, 64)"></i>rgb(47, 55, 64)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(255, 178, 56)"></i>rgb(255, 178, 56) 앰버를 14% 불투명 배경으로만 사용</dd></div>
+    <div><dt>글꼴</dt><dd>Roboto</dd></div>
+  </dl>
+  <p class="small">포인트 색을 옅은 배경으로만 써서 강조를 절제.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">32</span><h3><a href="https://www.rescuetime.com" rel="noopener noreferrer" target="_blank">RescueTime</a></h3><span class="chip">시간 기록</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color="rgb(254, 254, 254)"></i>rgb(254, 254, 254)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(68, 66, 63)"></i>rgb(68, 66, 63)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(181, 210, 255)"></i>rgb(181, 210, 255) 연한 파랑 버튼(글자는 검정)</dd></div>
+    <div><dt>글꼴</dt><dd>Nunito</dd></div>
+  </dl>
+  <p class="small">연한 배경색 버튼에는 검정 글자를 써서 대비를 확보.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">33</span><h3><a href="https://journey.cloud" rel="noopener noreferrer" target="_blank">Journey</a></h3><span class="chip">일기</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>투명</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color="rgb(37, 211, 102)"></i>rgb(37, 211, 102) 초록 버튼(글자는 검정)</dd></div>
+    <div><dt>글꼴</dt><dd>Gotham Rounded</dd></div>
+  </dl>
+  <p class="small">일기 앱이지만 초록 버튼. 이 앱의 포인트 색과는 방향이 달라 채택하지 않음.</p>
+</li>
+<li class="ref">
+  <div class="ref-head"><span class="ref-no">34</span><h3><a href="https://toss.im" rel="noopener noreferrer" target="_blank">토스</a></h3><span class="chip">국내 서비스(한글 UI)</span></div>
+  <dl class="ref-dl">
+    <div><dt>배경</dt><dd><i class="sw" data-color=""></i>미측정 (body 배경 투명)</dd></div>
+    <div><dt>글자</dt><dd><i class="sw" data-color="rgb(0, 0, 0)"></i>rgb(0, 0, 0)</dd></div>
+    <div><dt>포인트</dt><dd><i class="sw" data-color=""></i>미측정</dd></div>
+    <div><dt>글꼴</dt><dd>Toss Product Sans</dd></div>
+  </dl>
+  <p class="small">한글 화면의 서체 크기와 줄 간격 감각을 참고. 색은 측정하지 못함.</p>
+</li>
+    </ol>
+  </main>
+  <script src="/references.js"></script>
+</body>
+</html>

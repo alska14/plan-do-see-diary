@@ -1,0 +1,135 @@
+{
+  "schema": "pds-schema-v2",
+  "app": "플랜두씨 다이어리 (Plan → Do → See)",
+  "database": "SQLite (서버 파일 DB, 환경변수 DB_PATH)",
+  "date_rules": {
+    "timezone": "Asia/Seoul",
+    "stored_timestamps": "UTC ISO-8601 문자열 (예: 2026-09-30T05:00:00.000Z). 서버가 저장할 때 항상 UTC로 바꿉니다.",
+    "stored_dates": "마감일·계획 기간은 서울 기준 달력 날짜 YYYY-MM-DD 문자열입니다.",
+    "display": "화면에서 시각은 Asia/Seoul로 바꿔 보여 줍니다. 입력 폼의 시각은 서울 시간으로 해석해 +09:00을 붙여 보냅니다.",
+    "today": "서버가 서울 시간 기준으로 계산합니다. 지연 판정에 쓰입니다.",
+    "week_start": "월요일"
+  },
+  "units": {
+    "time": "분(minute), 정수, 0 이상",
+    "priority": "1=높음, 2=보통, 3=낮음"
+  },
+  "tables": {
+    "plans": {
+      "purpose": "내가 세운 계획. 고쳐도 id는 그대로.",
+      "columns": {
+        "id": "INTEGER PK",
+        "title": "TEXT 1~100자",
+        "period_type": "TEXT day|week|month",
+        "start_date": "TEXT YYYY-MM-DD (KST)",
+        "end_date": "TEXT YYYY-MM-DD (KST), start_date 이상",
+        "priority": "INTEGER 1|2|3",
+        "success_criteria": "TEXT 1~300자",
+        "est_minutes": "INTEGER >= 0",
+        "original_json": "TEXT 처음 세운 값의 스냅샷. 수정해도 바뀌지 않음",
+        "carried_from_review_id": "INTEGER NULL 돌아보기에서 넘어온 계획이면 그 돌아보기 id",
+        "created_at": "TEXT UTC ISO",
+        "updated_at": "TEXT UTC ISO"
+      }
+    },
+    "plan_revisions": {
+      "purpose": "계획 수정 이력. 바뀐 항목마다 한 줄, 예전 값과 새 값을 나눠 저장.",
+      "columns": {
+        "id": "INTEGER PK",
+        "plan_id": "INTEGER FK plans.id ON DELETE CASCADE",
+        "field": "TEXT 바뀐 항목 이름",
+        "old_value": "TEXT",
+        "new_value": "TEXT",
+        "changed_at": "TEXT UTC ISO"
+      }
+    },
+    "todos": {
+      "purpose": "계획에 딸린 할 일",
+      "columns": {
+        "id": "INTEGER PK",
+        "plan_id": "INTEGER FK plans.id ON DELETE CASCADE",
+        "title": "TEXT 1~100자",
+        "memo": "TEXT <= 500자",
+        "due_date": "TEXT NULL YYYY-MM-DD (KST)",
+        "priority": "INTEGER 1|2|3",
+        "est_minutes": "INTEGER >= 0",
+        "status": "TEXT open|done",
+        "completed_at": "TEXT NULL UTC ISO",
+        "created_at": "TEXT UTC ISO",
+        "updated_at": "TEXT UTC ISO"
+      }
+    },
+    "todo_tags": {
+      "purpose": "할 일 태그(소문자). 필터는 이 표로 서버에서 처리.",
+      "columns": { "todo_id": "INTEGER FK todos.id ON DELETE CASCADE", "tag": "TEXT" },
+      "primary_key": ["todo_id", "tag"]
+    },
+    "runs": {
+      "purpose": "실행 기록. 계획 값은 덮어쓰지 않고 별도 저장.",
+      "columns": {
+        "id": "INTEGER PK",
+        "todo_id": "INTEGER FK todos.id ON DELETE CASCADE",
+        "started_at": "TEXT UTC ISO",
+        "ended_at": "TEXT UTC ISO, started_at 이상",
+        "actual_minutes": "INTEGER >= 0 (비우면 끝-시작으로 계산)",
+        "blocker_reason": "TEXT '' 이면 막힘 없음, <= 300자",
+        "created_at": "TEXT UTC ISO"
+      }
+    },
+    "completions": {
+      "purpose": "완료 기록. 같은 할 일에 유효한 완료(reopened_at IS NULL)는 한 건만.",
+      "columns": {
+        "id": "INTEGER PK",
+        "todo_id": "INTEGER FK todos.id ON DELETE CASCADE",
+        "completed_at": "TEXT UTC ISO",
+        "reopened_at": "TEXT NULL UTC ISO 진행 중으로 되돌린 시각"
+      },
+      "constraints": ["UNIQUE INDEX ux_completion_active (todo_id) WHERE reopened_at IS NULL"]
+    },
+    "reviews": {
+      "purpose": "돌아보기에서 정한 '다음 계획으로 넘길 고칠 점 한 줄'",
+      "columns": {
+        "id": "INTEGER PK",
+        "period_type": "TEXT day|week|month",
+        "range_start": "TEXT YYYY-MM-DD",
+        "range_end": "TEXT YYYY-MM-DD",
+        "carry_over": "TEXT 1~200자",
+        "next_plan_id": "INTEGER NULL FK plans.id ON DELETE SET NULL 넘어가서 만들어진 다음 계획",
+        "created_at": "TEXT UTC ISO"
+      }
+    }
+  },
+  "relations": [
+    "plans 1 — N todos",
+    "plans 1 — N plan_revisions",
+    "todos 1 — N runs",
+    "todos 1 — N completions (유효 1건)",
+    "todos N — N tags (todo_tags)",
+    "reviews 1 — 0..1 plans (next_plan_id, 다음 계획으로 넘긴 결과)"
+  ],
+  "review_rules": {
+    "target_todos": "기간과 겹치는 계획(start_date <= 기간 끝 AND end_date >= 기간 시작)에 딸린 지우지 않은 할 일",
+    "plans": "위 계획 수",
+    "done": "대상 할 일 중 status = done",
+    "delayed": "status = open 이고 due_date < 서울 오늘. 완료한 일은 지연으로 세지 않음",
+    "blocked": "blocker_reason 이 비어 있지 않은 실행 기록이 하나라도 있는 할 일 수",
+    "estimated_minutes": "대상 할 일의 est_minutes 합",
+    "actual_minutes": "대상 할 일의 runs.actual_minutes 합",
+    "diff_minutes": "actual - estimated (없으면 0)",
+    "drill_down": "GET /api/review/records?metric=... 는 집계 숫자를 만든 것과 같은 목록을 돌려줍니다"
+  },
+  "api": [
+    "GET /api/meta",
+    "GET|POST /api/plans, PATCH|DELETE /api/plans/:id, GET /api/plans/:id/revisions",
+    "GET|POST /api/todos, PATCH|DELETE /api/todos/:id, POST /api/todos/:id/complete, POST /api/todos/:id/reopen",
+    "GET /api/runs, POST /api/todos/:id/runs, DELETE /api/runs/:id",
+    "GET /api/review, GET /api/review/records, GET /api/reviews, POST /api/reviews/carry",
+    "GET /api/export"
+  ],
+  "security": {
+    "auth": "이번 과제에는 로그인 없음(7번 과제에서 추가). 링크를 아는 사람은 누구나 볼 수 있음",
+    "xss": "화면은 모든 사용자 글자를 textContent로만 넣음. innerHTML에 사용자 입력을 쓰지 않음",
+    "csp": "script-src 'self' 등 Content-Security-Policy 헤더 적용",
+    "secrets": "코드·응답·기록에 비밀값 없음. 설정은 PORT, DB_PATH 두 환경변수뿐"
+  }
+}

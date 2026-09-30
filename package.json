@@ -1,0 +1,17 @@
+{
+  "name": "plan-do-see-diary",
+  "version": "1.0.0",
+  "private": true,
+  "description": "플랜두씨 다이어리: 계획 → 실제로 한 일 → 돌아보기",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/api.test.js",
+    "refs": "node scripts/build-references.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0"
+  }
+}
