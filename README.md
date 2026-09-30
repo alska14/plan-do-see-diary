@@ -15,7 +15,7 @@ npm test           # API 41개 검사 (임시 DB 사용, 실제 자료에 영향
 
 | 파일 | 내용 |
 |---|---|
-| `server.js` | API, DB 스키마(libSQL), 지연·집계 규칙, 보안 헤더 |
+| `lib/server.js` | API, DB 스키마(libSQL), 지연·집계 규칙, 보안 헤더 |
 | `public/` | 화면 (`app.js`는 사용자 글자를 `textContent`로만 넣음) |
 | `contracts/pds-schema-v2.json` | 표·항목·관계·날짜 규칙 |
 | `docs/design-references.md` | 디자인 참고 서비스 34곳 실측 기록 (앱 안 `/references.html`에도 있음) |
@@ -54,7 +54,7 @@ Vercel 함수는 디스크가 유지되지 않으므로 자료는 Turso(libSQL)�
 2. Vercel Project Settings → Environment Variables에 다음 두 이름으로 등록합니다.
    - `TURSO_DATABASE_URL`: Turso 데이터베이스 접속 주소
    - `TURSO_AUTH_TOKEN`: Turso 인증 토큰
-3. 배포하면 `public/`은 Vercel이 정적으로 서빙하고, `/api/*`와 `/contracts/*`는 `api/index.js` 함수(`server.js`의 handler)가 처리합니다. 표는 첫 요청(콜드 스타트) 때 없으면 자동으로 만들어집니다(`CREATE ... IF NOT EXISTS`).
+3. 배포하면 `public/`은 Vercel이 정적으로 서빙하고, `/api/*`와 `/contracts/*`는 `api/index.js` 함수(`lib/server.js`의 handler)가 처리합니다. 표는 첫 요청(콜드 스타트) 때 없으면 자동으로 만들어집니다(`CREATE ... IF NOT EXISTS`).
 4. 로컬 폴백: `TURSO_DATABASE_URL`이 없으면 로컬 파일(`DB_PATH` 또는 `data/pds.db`)을 씁니다. 개발·테스트용이며 `npm test`도 임시 파일 DB로 돌아 원격에 접속하지 않습니다.
 
 배포 후 확인: `https://<배포 주소>/api/meta`가 200과 JSON을 돌려주는지, `/` 화면이 뜨는지, `/contracts/pds-schema-v2.json`이 열리는지 봅니다. 계획을 하나 만들고 새로고침·재배포 뒤에도 남아 있으면 Turso 저장이 정상입니다. 자료를 파일로 받으려면 화면의 '내 자료 파일로 내보내기'를 쓰면 됩니다.

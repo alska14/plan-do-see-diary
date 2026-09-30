@@ -3,7 +3,7 @@ const os = require('os'), path = require('path'), fs = require('fs');
 const tmp = path.join(os.tmpdir(), `pds-test-${Date.now()}.db`);
 process.env.DB_PATH = tmp; // TURSO_DATABASE_URL이 없으므로 로컬 file: DB(임시 파일)로 동작
 delete process.env.TURSO_DATABASE_URL;
-const { server, db } = require('../server.js');
+const { server, db } = require('../lib/server.js');
 let pass = 0, failN = 0;
 const ok = (c, m) => { if (c) pass++; else { failN++; console.log('FAIL', m); } };
 server.listen(0, async () => {
